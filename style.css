@@ -1,7 +1,7 @@
 .header-main{
     background-color: rgb(80, 80, 171);
-    height: 20vh;
-    padding: 5vh 1vh;
+    height: 15vh;
+    padding: 3vh 1vh;
 }
 .header_logo{
     width: 100%;
@@ -19,6 +19,7 @@
     float: left;
     width: 100%;
     height: 7vh;
+    margin: 0;
 }
 .search-bar input{
     width: 100vh;
@@ -39,3 +40,93 @@
     padding-top: 5px;
     border-radius: 20px;
 }
+
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+
+.slider1{
+    width: 100vw;
+    height: 60vh;
+    margin: 0;
+    position: relative;
+}
+
+.slider1 ul{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.slide{
+    position:absolute;
+    inset: 0;
+    opacity: 1;
+}
+
+.slide img{
+    display: block;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide[data-active]{
+    opacity: 1;
+}
+
+.slider-button{
+    position:absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 5rem;
+    top: 50%;
+    color: rgb(226, 223, 223);
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.slider-button:hover, .slider-button:focus{
+    color: white;
+}
+
+.slider-button:focus{
+    outline: 1px solid black ;
+}
+
+.slider-button.prev{
+    left: 1rem;
+}
+
+.slider-button.next{
+    right: 1rem;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade{
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+.ongoing-shows{
+    margin: 6vh auto;
+}
+.ongoing-heading{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(114, 113, 113);
+    font-family: Verdana;
+}
+
